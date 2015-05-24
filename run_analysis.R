@@ -1,7 +1,12 @@
+## run_analysis.R
+
 library("reshape2")
+
+## Unzip the downloaded file into the current working directory.
 
 unzip(zipfile="./getdata-projectfiles-UCI HAR Dataset.zip")
 
+## Read all imput files
 
 trainXTrain <- read.table(file="./UCI HAR Dataset/train/X_train.txt", header = FALSE)
 testXTest  <- read.table(file="./UCI HAR Dataset/test/X_test.txt", header = FALSE)
@@ -11,6 +16,8 @@ trainSubjectTrain <- read.table(file="./UCI HAR Dataset/train/subject_train.txt"
 testSubjectTest  <- read.table(file="./UCI HAR Dataset/test/subject_test.txt", header = FALSE)
 features <- read.table(file="./UCI HAR Dataset/features.txt", header = FALSE)
 activityLabels <- read.table(file="./UCI HAR Dataset/activity_labels.txt", header = FALSE)
+
+## Apply all column names
 
 names(trainXTrain) <- features[,2]
 names(testXTest) <- features[,2]
@@ -44,6 +51,8 @@ combineddata <- combineddata[,!(names(combineddata) %in% c("ActivityLabel"))]
 meltdataset <- melt(data=combineddata, id=c("SubjectID", "ActivityName"))
 
 tidyData <- dcast(data=meltdataset, SubjectID + ActivityName ~ variable, mean)
+
+## Write tidy data
 
 write.csv(tidyData, file="./TidyDataSet.txt", row.names=FALSE)
 
