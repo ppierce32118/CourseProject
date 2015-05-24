@@ -1,6 +1,6 @@
 # Getting and Cleaning Data 
 
-NOTE: Much content from here was taken from the sources at [1] and [2]
+NOTE: Content for here was taken from the sources at [1] and [2]
 
 ## Course Project
 

@@ -12,7 +12,7 @@ This project uses the "Human Activity Recognition Using Smartphones Dataset"
 downloaded to ./getdata-projectfiles-UCI HAR Dataset.zip before run\_analysis.R from:
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-## Script Walkthrough
+## Script
 
 The run\_analysis.R script will perform the following steps:
 
