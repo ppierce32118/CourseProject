@@ -1,5 +1,3 @@
-setwd("C:/Projects/Docs/Analytics/Class 3 Getting and Cleaning Data/CourseProject")
-
 library("reshape2")
 
 unzip(zipfile="./getdata-projectfiles-UCI HAR Dataset.zip")
