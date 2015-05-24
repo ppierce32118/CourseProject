@@ -27,4 +27,4 @@ The run\_analysis.R script will perform the following steps:
 * Removes columns used only for tidying up the data set (intermediate calculations)
 * Melts the data set (note this is why we require reshape2 library)
 * Creates a second, independent, tidy data set which contains the average of each variable for each activity and subject
-* Saves the resulting tidy data set to file ./data/TidyDataSet.txt
+* Saves the resulting tidy data set to file ./TidyDataSet.txt
